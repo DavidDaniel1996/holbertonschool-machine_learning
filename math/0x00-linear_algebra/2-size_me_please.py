@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 
-import numpy as np
-
-
 def matrix_shape(matrix):
-    np_array = np.array(matrix)
-    return(list(np_array.shape))
+    """ Calculates shape of a matrix """
+    try:
+        shape = [len(matrix), len(matrix[0]), len(matrix[0][0])]
+        return shape
+    except TypeError:
+        try:
+            shape = [len(matrix), len(matrix[0])]
+            return shape
+        except TypeError:
+            shape = [len(matrix)]
+            return shape
