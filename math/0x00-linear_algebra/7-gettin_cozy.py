@@ -5,26 +5,29 @@
 def cat_matrices2D(mat1, mat2, axis=0):
     """ Concatenates 2d matrices along specified axis """
 
-    new_matrix = []
+    try:
+        new_matrix = []
 
-    for i in range(len(mat1)):
-        new_row = []
-        for j in range(len(mat1[i])):
-            new_row.append(mat1[i][j])
-        new_matrix.append(new_row)
+        for i in range(len(mat1)):
+            new_row = []
+            for j in range(len(mat1[i])):
+                new_row.append(mat1[i][j])
+            new_matrix.append(new_row)
 
-    if axis == 0:
-        for i in range(len(mat2)):
-            new_matrix.append(mat2[i][:])
+        if axis == 0:
+            for i in range(len(mat2)):
+                new_matrix.append(mat2[i][:])
 
-        return new_matrix
+            return new_matrix
 
-    elif axis == 1:
-        for i in range(len(mat2)):
-            for j in range(len(mat2[i])):
-                new_matrix[i].append(mat2[i][j])
+        elif axis == 1:
+            for i in range(len(mat2)):
+                for j in range(len(mat2[i])):
+                    new_matrix[i].append(mat2[i][j])
 
-        return new_matrix
+            return new_matrix
 
-    else:
+        else:
+            return None
+    except Exception:
         return None
