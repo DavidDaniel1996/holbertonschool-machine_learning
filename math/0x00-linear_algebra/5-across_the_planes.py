@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
+""" Module to add elements of two 2d matrices """
+
 
 def add_matrices2D(mat1, mat2):
+    """ Addes elements of 2d matrices together """
 
     if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
         return None
