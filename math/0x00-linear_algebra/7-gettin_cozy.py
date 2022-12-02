@@ -1,8 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Module concatenates two 2d matrices """
 
 
 def cat_matrices2D(mat1, mat2, axis=0):
+    """ Concatenates 2d matrices along specified axis """
 
     new_matrix = []
 
